@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<drjava version="drjava-20110822-r5448">
+  <project autorefresh="false" build="bin/" main="Project5" root="" work="">
+    <createjar file=""/>
+    <source>
+      <file active="true" name="HighScores.java" package="" timestamp="21-Nov-2011 01:02:32">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Settings.java" package="" timestamp="10-Nov-2011 16:37:14">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="GameSounds.java" package="" timestamp="10-Nov-2011 16:37:14">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Ship.java" package="" timestamp="20-Nov-2011 23:30:30">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Mushroom.java" package="" timestamp="20-Nov-2011 23:30:35">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Centipede.java" package="" timestamp="20-Nov-2011 23:30:40">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="DrawGraphics.java" package="" timestamp="21-Nov-2011 00:36:56">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Project5.java" package="" timestamp="21-Nov-2011 00:56:09">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="Frame.java" package="" timestamp="21-Nov-2011 01:11:07">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="GameCanvas.java" package="" timestamp="21-Nov-2011 01:13:17">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+      <file name="GameLogic.java" package="" timestamp="21-Nov-2011 01:15:46">
+        <select from="173" to="173"/>
+        <scroll column="0" row="0"/>
+      </file>
+    </source>
+    <included/>
+    <excluded/>
+    <collapsed/>
+    <classpath/>
+    <breakpoints/>
+    <watches/>
+    <bookmarks/>
+    <preferences/>
+  </project>
+</drjava>

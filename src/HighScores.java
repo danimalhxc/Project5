@@ -58,5 +58,10 @@ public class HighScores{
     public void writeScores(){
         // TODO: Write the high scores data to the file name indicated
         // TODO: by Settings.highScoresFileName.
+        try{
+        	PrintWriter s = new PrintWriter(new File(Settings.highScoresFileName));
+    	}catch(FileNotFoundException e){
+    		System.out.println("Exception found: " + e);
+    	}
     }
 }

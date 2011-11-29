@@ -163,8 +163,6 @@ public class Frame extends JFrame implements MenuListener, ActionListener{
     	if (e.getSource() == highScores)	{
     		myGameLogic.paused = true;
     		myHighScores.showHighScores("temp", myGameLogic.score);
-    	}else{
-    		myGameLogic.paused = false;
     	}
             
         // TODO: If pause game selected, pause/unpause the game and set the menu item text to

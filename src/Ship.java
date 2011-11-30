@@ -40,10 +40,10 @@ public class Ship{
     	myProjectiles = inProjectiles;
         
         // TODO: Set the loc of the ship to (Settings.shipStartLoc.x, Settings.shipStartLoc.y)
-        loc.setLocation(Settings.shipStartLoc.x, Settings.shipStartLoc.y);
+        loc = new Point(Settings.shipStartLoc.x, Settings.shipStartLoc.y);
     	
         // TODO: Set tryLoc to the same location as the ship's starting position.
-        tryLoc.setLocation(loc);
+        tryLoc = new Point(loc);
         
         // TODO: Set the ship's lives to Settings.startLives
         lives = Settings.startLives;

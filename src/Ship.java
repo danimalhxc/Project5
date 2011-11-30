@@ -33,7 +33,7 @@ public class Ship{
      * @param inGameSounds  Used to generate sound when ship fires
      * @param inProjectiles Used to create new projectiles
      **/
-    public Ship(GameSounds inGameSounds, Point inProjectiles[]){
+    public Ship(GameSounds inGameSounds, Point[] inProjectiles){
         // TODO: Initialize myProjectiles and myGameSounds with the
         // TODO: passed parameters.
     	myGameSounds = inGameSounds;

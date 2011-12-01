@@ -33,17 +33,17 @@ public class Ship{
      * @param inGameSounds  Used to generate sound when ship fires
      * @param inProjectiles Used to create new projectiles
      **/
-    public Ship(GameSounds inGameSounds, Point inProjectiles[]){
+    public Ship(GameSounds inGameSounds, Point[] inProjectiles){
         // TODO: Initialize myProjectiles and myGameSounds with the
         // TODO: passed parameters.
     	myGameSounds = inGameSounds;
     	myProjectiles = inProjectiles;
         
         // TODO: Set the loc of the ship to (Settings.shipStartLoc.x, Settings.shipStartLoc.y)
-        loc.setLocation(Settings.shipStartLoc.x, Settings.shipStartLoc.y);
+        loc = new Point(Settings.shipStartLoc.x, Settings.shipStartLoc.y);
     	
         // TODO: Set tryLoc to the same location as the ship's starting position.
-        tryLoc.setLocation(loc);
+        tryLoc = new Point(loc);
         
         // TODO: Set the ship's lives to Settings.startLives
         lives = Settings.startLives;

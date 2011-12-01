@@ -67,26 +67,28 @@ public class Frame extends JFrame implements MenuListener, ActionListener{
     	myHighScores = inHighScores;
         
         // TODO: Setup the file menu.
-    	newGame.setText("New Game");
-    	pauseGame.setText("Pause Game");
-    	exitGame.setText("Exit Game");
+    	newGame = new JMenuItem("New Game");
+    	pauseGame = new JMenuItem("Pause Game");
+    	exitGame = new JMenuItem("Exit Game");
     	newGame.addActionListener(this);
     	pauseGame.addActionListener(this);
     	exitGame.addActionListener(this);
+    	file = new JMenu("File");
     	file.add(newGame);
     	file.add(pauseGame);
     	file.add(exitGame);
     	file.addMenuListener(this);
         
         // TODO: Setup the options menu
-    	easyDifficulty.setText("Easy");
-    	mediumDifficulty.setText("Medium");
-    	hardDifficulty.setText("Hard");
-    	superLaser.setText("Super Laser = OFF");
+    	easyDifficulty = new JRadioButtonMenuItem("Easy");
+    	mediumDifficulty = new JRadioButtonMenuItem("Medium");
+    	hardDifficulty = new JRadioButtonMenuItem("Hard");
+    	superLaser = new JMenuItem("Super Laser = OFF");
     	easyDifficulty.addActionListener(this);
     	mediumDifficulty.addActionListener(this);
     	hardDifficulty.addActionListener(this);
     	superLaser.addActionListener(this);
+    	options = new JMenu();
         options.add(easyDifficulty);
         options.add(mediumDifficulty);
         options.add(hardDifficulty);
@@ -94,9 +96,11 @@ public class Frame extends JFrame implements MenuListener, ActionListener{
         options.addMenuListener(this);
     	
         // TODO: Setup the high scores menu
+        highScores = new JMenuItem();
         highScores.addActionListener(this);
         
         // TODO: Setup the menu bar
+        bar = new JMenuBar();
         bar.add(file);
         bar.add(options);
         bar.add(highScores);

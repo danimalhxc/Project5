@@ -1,6 +1,5 @@
 import java.awt.*;
 import java.util.*;
-//Fuck you Jared
 /**
  * Centipede direction, length and its segments
  * 

@@ -88,7 +88,7 @@ public class Frame extends JFrame implements MenuListener, ActionListener{
     	mediumDifficulty.addActionListener(this);
     	hardDifficulty.addActionListener(this);
     	superLaser.addActionListener(this);
-    	options = new JMenu();
+    	options = new JMenu("Options");
         options.add(easyDifficulty);
         options.add(mediumDifficulty);
         options.add(hardDifficulty);
@@ -96,7 +96,7 @@ public class Frame extends JFrame implements MenuListener, ActionListener{
         options.addMenuListener(this);
     	
         // TODO: Setup the high scores menu
-        highScores = new JMenuItem();
+        highScores = new JMenuItem("High Scores");
         highScores.addActionListener(this);
         
         // TODO: Setup the menu bar
@@ -104,7 +104,7 @@ public class Frame extends JFrame implements MenuListener, ActionListener{
         bar.add(file);
         bar.add(options);
         bar.add(highScores);
-        add(bar);
+        setJMenuBar(bar);
         
         // TODO: Setup the frame using GridBagLayout
         setLayout(new GridBagLayout());
@@ -188,34 +188,39 @@ public class Frame extends JFrame implements MenuListener, ActionListener{
     	
         // TODO: If super laser selected, toggle the super laser and the menu item's display
         if (e.getSource() == superLaser){
-        	Settings.superLaser = true;
-        	superLaser.setText("Super Laser = ON");
+        	if (superLaser.getText().equals("Super Laser = ON"))	{
+        		Settings.superLaser = false;
+        		superLaser.setText("Super Laser = OFF");
+        	}else if (superLaser.getText().equals("Super Laser = OFF"))	{
+        		Settings.superLaser = true;
+        		superLaser.setText("Super Laser = ON");
+        	}
         }
             
         // TODO: If easy difficulty selected, make sure its radio button is selected, turn off the other difficulties' radio buttons,
         // TODO: set the game difficulty and adjust the centipede delay accordingly.
         if (e.getSource() == easyDifficulty)	{
-        	easyDifficulty.setEnabled(true);
-        	mediumDifficulty.setEnabled(false);
-        	hardDifficulty.setEnabled(false);
+        	easyDifficulty.setSelected(true);
+        	mediumDifficulty.setSelected(false);
+        	hardDifficulty.setSelected(false);
         	Settings.centDelay = Settings.centDelayEasy;
         }
 
         // TODO: If medium difficulty selected, make sure its radio button is selected, turn off the other difficulties' radio buttons,
         // TODO: set the game difficulty and adjust the centipede delay accordingly.
         if (e.getSource() == mediumDifficulty)	{
-        	easyDifficulty.setEnabled(false);
-        	mediumDifficulty.setEnabled(true);
-        	hardDifficulty.setEnabled(false);
+        	easyDifficulty.setSelected(false);
+        	mediumDifficulty.setSelected(true);
+        	hardDifficulty.setSelected(false);
         	Settings.centDelay = Settings.centDelayMedium;
         }
          
         // TODO: If hard difficulty selected, make sure its radio button is selected, turn off the other difficulties' radio buttons,
         // TODO: set the game difficulty and adjust the centipede delay accordingly.
         if (e.getSource() == hardDifficulty){
-        	easyDifficulty.setEnabled(false);
-        	mediumDifficulty.setEnabled(false);
-        	hardDifficulty.setEnabled(true);
+        	easyDifficulty.setSelected(false);
+        	mediumDifficulty.setSelected(false);
+        	hardDifficulty.setSelected(true);
         	Settings.centDelay = Settings.centDelayHard;
         }
     }

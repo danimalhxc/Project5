@@ -9,7 +9,7 @@ import java.util.*;
  **/
 public class Centipede{
     /** Array of the centipede's body segments **/
-    public Point segments[];
+    public static Point segments[];
     
     /** Centipede head's horizontal heading **/
     public int horizontal;

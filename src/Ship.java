@@ -12,7 +12,7 @@ public class Ship{
     public Point tryLoc;
     
     /** Actual position of the ship **/
-    public Point loc;
+    public static Point loc;
     
     /** Number of lives that the ship has **/
     public int lives;

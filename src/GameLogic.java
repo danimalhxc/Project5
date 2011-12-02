@@ -133,12 +133,23 @@ public class GameLogic extends Thread{
         int result = Settings.NONE;
         
         // TODO: Check all segments of all centipedes to see if they contain the Point loc.
-                
+                for (int i = 0; i < Centipede.segments.length; i++)	{
+                	if (Centipede.segments[i] == loc)	{
+                		//TODO: Handle this situation
+                	}
+                }
         // TODO: Check all mushrooms to see if they contain the Point loc.
+                
         
         // TODO: Check to see if the ship occupies the Point loc.
+                if (Ship.loc == loc){
+                	//TODO: Handle this situation
+                }
         
         // TODO: Check all projectiles to see if they contain the Point loc.
+                for (int i = 0; i < myProjectiles.length; i++)	{
+                	//TODO: Handle this situation
+                }
         
         // TODO: Check to see if the point has impacted or crossed beyond a wall.
         

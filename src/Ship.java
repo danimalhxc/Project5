@@ -63,7 +63,7 @@ public class Ship{
         // TODO: Make sure to play the appropriate sound effect if the ship fires.
     	if (invulnerableTime == 0 && myProjectiles.length < Settings.maxProjectiles)	{
     		myGameSounds.laser();
-    		//myProjectiles[] = loc;
+    		
     	}
     }
 }

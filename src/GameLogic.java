@@ -111,11 +111,12 @@ public class GameLogic extends Thread{
     	myShip.invulnerableTime = 0;
         
         // TODO: Remove any leftover centipedesS
-        
+    	
         // TODO: Remove any leftover projectiles
         
         // TODO: Create a single centipede of Settings.centipedeStartSize segments heading
         // TODO: right and down.  Be sure to initialize all the segments of the Centipede.
+    	myCentipedes[0] = new Centipede(10, 0, 1);
                 
         // TODO: Create array of mushrooms and randomly place them on the game grid.
         // TODO: Make sure that mushrooms do not overlap and keep them off of the 
@@ -192,7 +193,7 @@ public class GameLogic extends Thread{
         // TODO: Try moving the ship based on the mouse position.  First test to see if the ship has impacted any
         // TODO: Centipedes.  If it has, play the explosion sound, decrement the number
         // TODO: of lives and set the ship's invulnerableTime to Settings.invulnerableTime.
-        // TOOD: If the ship has run out of lives, run the gameOver() method.
+        // TODO: If the ship has run out of lives, run the gameOver() method.
         
         // TODO: Check if the ship is trying to move into a mushroom.  The ship should not
         // TODO: lose a life from this, but it should be blocked from moving.

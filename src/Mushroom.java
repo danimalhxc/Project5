@@ -20,7 +20,7 @@ public class Mushroom{
      **/
     public Mushroom(Point loc, int health){
         // TODO: Initialize the location and health of the Mushroom from
-        // TODO: the passed paramters.
+        // TODO: the passed parameters.
     	this.loc = loc;
     	this.health = health;
     }

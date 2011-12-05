@@ -1,4 +1,6 @@
 import java.io.*;
+import java.util.Scanner;
+
 import javax.swing.*;
 
 /**
@@ -17,9 +19,31 @@ public class HighScores{
     
     public HighScores(){
         // TODO: Check if the file named in Settings.highScoresFileName exists.
-        // TODO: If it does not, create it with Settings.numScores entires of
+        // TODO: If it does not, create it with Settings.numScores entities of
         // TODO: name = nobody and score = 0.  If it does exist, load its contents
         // TODO: into the names and scores arrays.
+    	File highScores = new File(Settings.highScoresFileName);
+    	PrintWriter pw = null;
+    	Scanner s = null;
+    	try{
+    		pw = new PrintWriter(highScores);
+    		s = new Scanner(highScores);
+    	}catch(Exception e){
+    		System.exit(0);
+    	}
+    	if (highScores.exists()) {
+    		while(s.hasNext()){
+    			int i = 0;
+    			names[i] = s.next();
+    			scores[i] = s.nextInt();
+    			i++;
+    		}
+    	}
+    	else {
+    		for (int i = 0; i < Settings.numScores; i++)	{
+    			pw.print("nobody0\t");
+    		}
+    	}
     }
     
     /**

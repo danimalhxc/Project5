@@ -146,8 +146,7 @@ public class GameLogic extends Thread{
         		}
         	}
         }
-        // TODO: Check all mushrooms to see if they contain the Point loc.
-                
+        // TODO: Check all mushrooms to see if they contain the Point loc.                
         
         // TODO: Check to see if the ship occupies the Point loc.
                 if (myShip.loc == loc){
@@ -228,6 +227,9 @@ public class GameLogic extends Thread{
      **/
     public void gameOver(){
         // TODO: Set gameOverFlag to true, stop the ship from firing, play the gameOver sound
-        // TODO: and try adding the score to the high scores.    
+        // TODO: and try adding the score to the high scores. 
+    	gameOverFlag = true;
+    	myShip.firing = false;
+    	myGameSounds.gameOver();
     }
 }

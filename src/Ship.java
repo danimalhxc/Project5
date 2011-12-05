@@ -12,7 +12,7 @@ public class Ship{
     public Point tryLoc;
     
     /** Actual position of the ship **/
-    public static Point loc;
+    public Point loc;
     
     /** Number of lives that the ship has **/
     public int lives;
@@ -61,6 +61,9 @@ public class Ship{
     public void fire(){
         // TODO: Write code to implement the description above.
         // TODO: Make sure to play the appropriate sound effect if the ship fires.
-    	
+    	if (invulnerableTime == 0 && myProjectiles.length < Settings.maxProjectiles)	{
+    		myGameSounds.laser();
+    		//add to myProjectiles?
+    	}
     }
 }

@@ -9,7 +9,7 @@ import java.util.*;
  **/
 public class Centipede{
     /** Array of the centipede's body segments **/
-    public static Point segments[];
+    public Point segments[];
     
     /** Centipede head's horizontal heading **/
     public int horizontal;
@@ -28,8 +28,12 @@ public class Centipede{
     public Centipede(int inLength, int inHorizontal, int inVertical){
         // TODO: Initialize length, horizontal and vertical with
         // TODO: passed parameters.
+    	length = inLength;
+    	horizontal = inHorizontal;
+    	vertical = inVertical;
         
         // TODO: Create the head segment of the Centipede.
+    	segments[0] = new Point(0, 0);
     }
     
     /**

@@ -103,10 +103,14 @@ public class GameLogic extends Thread{
     public void initGame(){        
         // TODO: Initialize the difficulty, level and lives to match the corresponding
         // TODO: values in Settings.
+    	difficulty = Settings.startDifficulty;
+    	level = Settings.startLevel;
+    	myShip.lives = Settings.startLives;
         
         // TODO: Initialize myShip.invulnerableTime and score to 0.
+    	myShip.invulnerableTime = 0;
         
-        // TODO: Remove any leftover centipedes
+        // TODO: Remove any leftover centipedesS
         
         // TODO: Remove any leftover projectiles
         
@@ -118,6 +122,8 @@ public class GameLogic extends Thread{
         // TODO: bottom row.
                 
         // TODO: Set the gameOverFlag to false and play the newGame sound
+    	gameOverFlag = false;
+    	myGameSounds.newGame();
     }
     
     /**
@@ -133,16 +139,18 @@ public class GameLogic extends Thread{
         int result = Settings.NONE;
         
         // TODO: Check all segments of all centipedes to see if they contain the Point loc.
-                for (int i = 0; i < Centipede.segments.length; i++)	{
-                	if (Centipede.segments[i] == loc)	{
-                		//TODO: Handle this situation
-                	}
-                }
+        for (int i = 0; i < myCentipedes.length; i++)	{
+        	for (int j = 0; j < myCentipedes[i].segments.length; j++)	{
+        		if (myCentipedes[i].segments[j] == loc)	{
+        			//TODO: Handle this situation
+        		}
+        	}
+        }
         // TODO: Check all mushrooms to see if they contain the Point loc.
                 
         
         // TODO: Check to see if the ship occupies the Point loc.
-                if (Ship.loc == loc){
+                if (myShip.loc == loc){
                 	//TODO: Handle this situation
                 }
         

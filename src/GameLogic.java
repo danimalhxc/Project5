@@ -212,6 +212,10 @@ public class GameLogic extends Thread{
 		// TODO: lose a life from this, but it should be blocked from moving.
 
 		// TODO: Set the ship's new location based on the results of the tests above.
+
+            Point next = myShip.tryLoc;
+                if(next)
+
 	}
 
 	/**
@@ -242,6 +246,10 @@ public class GameLogic extends Thread{
 	 **/
 	public void gameOver(){
 		// TODO: Set gameOverFlag to true, stop the ship from firing, play the gameOver sound
-		// TODO: and try adding the score to the high scores.    
+		// TODO: and try adding the score to the high scores.
+            gameOverFlag = true;
+            myShip.firing = false;
+            myGameSounds.gameOver();
+            myHighScores.addHighScore(score);
 	}
 }

@@ -94,6 +94,8 @@ public class GameLogic extends Thread{
 
 			// Update the canvas
 			myGameCanvas.drawFrame();
+                        moveShip();
+
 		}
 	}
 
@@ -213,8 +215,11 @@ public class GameLogic extends Thread{
 
 		// TODO: Set the ship's new location based on the results of the tests above.
 
-            Point next = myShip.tryLoc;
-                if(next)
+            myShip.loc.x = myShip.tryLoc.x;
+            myShip.loc.y = myShip.tryLoc.y;
+            
+
+            
 
 	}
 
